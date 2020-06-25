@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@android:color/background_light"
+    android:padding="0dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgTopo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fundo_logo" />
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutConteudo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLinha1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutAreaCliente"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickAreaCliente"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageAreaCliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/area_cliente" />
+
+                    <TextView
+                        android:id="@+id/btnAreaCliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:padding="0dp"
+                        android:text="Área do \nCliente"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTesteVelocidade"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickTesteVelocidade"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutAreaCliente"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewTesteVelocidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/teste_velocidade_speed" />
+
+                    <TextView
+                        android:id="@+id/txtTesteVelocidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:padding="0dp"
+                        android:text="Teste de Velocidade"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutNossosPlanos"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickNossosPlanos"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutTesteVelocidade"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewNossosPlanos"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/nossos_planos" />
+
+                    <TextView
+                        android:id="@+id/txtNossosPlanos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:padding="0dp"
+                        android:text="Nossos \nPlanos"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLinha2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutLinha1">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutAnalisadorCanal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickAnalisadorCanal"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewAnalisadorCanal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/averiguacao_sinal_foreground" />
+
+                    <TextView
+                        android:id="@+id/btnAnalisadorCanal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:padding="0dp"
+                        android:text="Analisador de\nCanal"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCentralAtendimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickCentralAtendimento"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/central_atendimento" />
+
+                    <TextView
+                        android:id="@+id/btnAreaCliente2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:padding="0dp"
+                        android:text="Central de Atendimento"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutChatWhatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickChatWhatsapp"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutAreaCliente"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewChatWhatsapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/central_whatsapp" />
+
+                    <TextView
+                        android:id="@+id/txtChatWhatsapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:padding="0dp"
+                        android:text="Chat \nWhatsapp"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLinha3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutLinha2">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutAparelhoConectado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickAparelhosConectados"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutTesteVelocidade"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewAparelhoConectado"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/aparelho_conectado" />
+
+                    <TextView
+                        android:id="@+id/txtAparelhoConectado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:layout_weight="1"
+                        android:padding="0dp"
+                        android:text="Aparelhos Conectados"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutNivelSinalWifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickNivelSinalWifi"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutAreaCliente"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewNivelSinalWifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/teste_velocidade" />
+
+                    <TextView
+                        android:id="@+id/txtNivelSinalWifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+
+                        android:padding="0dp"
+                        android:text="Nível de Sinal do Wifi"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSite"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutTesteVelocidade"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewSite"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/site" />
+
+                    <TextView
+                        android:id="@+id/txtSite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:layout_weight="1"
+                        android:padding="0dp"
+                        android:text="Site"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLinha4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutLinha3">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSegundaViaBoleto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSegundaViaBoleto"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewSegundaViaBoleto"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/segunda_via_boleto" />
+
+                    <TextView
+                        android:id="@+id/btnSegundaViaBoleto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:padding="0dp"
+                        android:text="2ª Via de\nboleto"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutNovidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickNovidade"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewNovidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/speaker" />
+
+                    <TextView
+                        android:id="@+id/btnNovidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:padding="0dp"
+                        android:text="News"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutRedeSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickRedeSocial"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutAreaCliente"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewRedeSocial"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/rede_social" />
+
+                    <TextView
+                        android:id="@+id/txtRedeSocial"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+
+                        android:padding="0dp"
+                        android:text="Redes Sociais"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLinha5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutLinha3">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSobre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSobre"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+                    <ImageView
+                        android:id="@+id/imageViewSobre"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:padding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTopo"
+                        app:srcCompat="@mipmap/info" />
+
+                    <TextView
+                        android:id="@+id/txtSobreMissao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:layout_weight="1"
+                        android:padding="0dp"
+                        android:text="Sobre"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickNovidade"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickRedeSocial"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutAreaCliente"
+                    app:layout_constraintTop_toBottomOf="@+id/imgTopo">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

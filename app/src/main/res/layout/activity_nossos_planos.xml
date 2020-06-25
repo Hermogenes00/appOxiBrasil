@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NossosPlanosActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatBtnWhatsapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="70dp"
+        android:src="@mipmap/whatsapp"
+        app:backgroundTint="@color/cardview_light_background"
+        app:layout_constraintBottom_toBottomOf="@id/floatBtnFixo"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatBtnFixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/central_atendimento"
+        app:backgroundTint="@color/cardview_light_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTopo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutConteudo"
+                android:layout_width="match_parent"
+                android:layout_height="399dp"
+                android:orientation="vertical">
+
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:id="@+id/imageViewPlanosFibra"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="383dp"
+                    android:layout_marginBottom="5dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/planos_fibra" />
+
+
+                <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/imageViewQualRoteador"
+                    android:layout_width="match_parent"
+                    android:layout_height="383dp"
+                    android:layout_marginBottom="5dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/qual_roteador" />
+
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:id="@+id/imageViewRoteadorMenor60"
+                    android:layout_width="match_parent"
+                    android:layout_height="383dp"
+                    android:layout_marginBottom="5dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/roteador_menor_que_60mb" />
+
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:id="@+id/imageViewRoteadorMaior60"
+                    android:layout_width="match_parent"
+                    android:layout_height="383dp"
+                    android:layout_marginBottom="5dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/roteador_maior_que_60mb" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRodape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

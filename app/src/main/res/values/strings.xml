@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OXI Brasil</string>
+
+    <string name="empresa">Desde o início estivemos em busca de melhorias tanto em tecnologia quanto em qualificação da nossa equipe.\n \nTodas as decisões sempre
+        foram tomadas com o objetivo de sermos reconhecidos regionalmente por oferecer serviços de qualidade.\n \nAtualmente nossa empresa se encontra em expansão,
+        pois ampliamos nossa área de cobertura e agregamos novos serviços, sempre preocupados com nosso foco principal que é a satisfação dos nossos clientes.</string>
+
+    <string name="endereco">R CONSELHEIRO SARAIVA, 01 - CENTRO, Alagoinhas - BA, 48010-020</string>
+    <string name="brasil_design">Desenvolvido por Brasil Design</string>
+</resources>

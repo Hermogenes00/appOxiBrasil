@@ -89,15 +89,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSite(View view) {
-        chamarWebView("https://www.brasilconectba.com.br/");
+        chamarWebView("https://crm.oxibrasiltelecom.com.br/");
     }
 
     public void onClickNovidade(View view) {
-        chamarWebView("https://www.oxibrasiltelecom.com.br/news.php");
+        chamarWebView("https://crm.oxibrasiltelecom.com.br/news");
     }
 
     public void onClickAreaCliente(View view) {
-        chamarWebView("https://www.brasilconectba.com.br/central_assinante_web/");
+        chamarWebView("https://crm.oxibrasiltelecom.com.br/central_assinante_web/");
     }
 
     public void onClickRedeSocial(View view) {
